@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>dta-pizzeria</groupId>
-		<artifactId>pizzeria-parent</artifactId>
+		<artifactId>joelT-pizzeria-parent</artifactId>
 		<version>1.0.0</version>
 		<relativePath>../joelT-pizzeria-parent</relativePath>
 	</parent>
-	<artifactId>pizzeria-console</artifactId>
+	<artifactId>joelT-pizzeria-console</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>dta-pizzeria</groupId>
