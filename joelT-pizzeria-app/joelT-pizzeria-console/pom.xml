@@ -19,5 +19,10 @@
 			<artifactId>joelT-pizzeria-dao</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+		<dependency>
+			<groupId>io.gatling</groupId>
+			<artifactId>maven-shade-plugin</artifactId>
+			<version>2.4.4.2</version>
+		</dependency>
 	</dependencies>
 </project>
