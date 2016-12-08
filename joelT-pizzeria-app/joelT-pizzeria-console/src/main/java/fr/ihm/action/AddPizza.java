@@ -1,5 +1,6 @@
 package fr.ihm.action;
 
+import java.io.IOException;
 import java.util.stream.Stream;
 
 import fr.exception.SavePizzaException;
@@ -18,7 +19,7 @@ public class AddPizza extends Action {
 	}
 
 	@Override
-	public void doAction() throws SavePizzaException {
+	public void doAction() throws SavePizzaException, IOException {
 
 		System.out.println("");
 		System.out.println("Veuillez entrer l'alias de la nouvelle pizza s'il vous plait");

@@ -1,5 +1,7 @@
 package fr.ihm.action;
 
+import java.io.IOException;
+
 import fr.exception.DeletePizzaException;
 import fr.exception.SavePizzaException;
 import fr.exception.UpdatesPizzaException;
@@ -16,7 +18,7 @@ public abstract class Action {
 		this.description = description;
 	}
 
-	public abstract void doAction() throws SavePizzaException, DeletePizzaException, UpdatesPizzaException;
+	public abstract void doAction() throws SavePizzaException, DeletePizzaException, UpdatesPizzaException, IOException;
 
 	public abstract void describeAction();
 }

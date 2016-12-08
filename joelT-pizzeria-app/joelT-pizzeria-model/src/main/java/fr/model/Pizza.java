@@ -21,10 +21,12 @@ public class Pizza {
 	private static int nbPizzas;
 
 	public Pizza(String code, String nom, CategoriePizza catPizza, double prix) {
+		this.id = nbPizzas;
 		this.code = code;
 		this.nom = nom;
 		this.prix = prix;
 		this.catPizza = catPizza;
+		nbPizzas++;
 	}
 
 	public Pizza(int id, String code, String nom, CategoriePizza catPizza, double prix) {

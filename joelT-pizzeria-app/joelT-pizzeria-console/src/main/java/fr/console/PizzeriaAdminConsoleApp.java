@@ -1,9 +1,10 @@
 package fr.console;
 
-import java.util.ResourceBundle;
+import java.io.IOException;
 import java.util.Scanner;
 
-import fr.dao.PizzaDaoFactory;
+import fr.dao.PizzaDaoFichier;
+import fr.dao.PizzaDaoTableau;
 import fr.exception.DeletePizzaException;
 import fr.exception.SavePizzaException;
 import fr.exception.UpdatesPizzaException;
@@ -15,7 +16,8 @@ public class PizzeriaAdminConsoleApp {
 	public static Boolean Arret = false;
 
 	public static void main(String[] args)
-			throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+			throws InstantiationException, IllegalAccessException, ClassNotFoundException, IOException,
+			SavePizzaException {
 		// initPizzas();
 		// printMenu();
 
@@ -35,19 +37,27 @@ public class PizzeriaAdminConsoleApp {
 		 * 
 		 * System.out.println("p1=p2  ?" + p1.equals(p2)); /
 		 *****************************************************/
-
-		ResourceBundle bunble = ResourceBundle.getBundle("application");
-		String doaConfig = bunble.getString("dao.impl");
-		PizzaDaoFactory doaFactory = (PizzaDaoFactory) Class.forName(doaConfig).newInstance();
-
+		/*
+		 * ResourceBundle bunble = ResourceBundle.getBundle("application");
+		 * String doaConfig = bunble.getString("dao.impl"); PizzaDaoFactory
+		 * doaFactory = (PizzaDaoFactory)
+		 * Class.forName(doaConfig).newInstance();
+		 */
 		/**
 		 * Pour le lancement
 		 */
-		IhmUtil ihmUtil = new IhmUtil(new Scanner(System.in), doaFactory);
+		/*
+		 * IhmUtil ihmUtil = new IhmUtil(new Scanner(System.in), doaFactory);
+		 * MainMenu Core = new MainMenu(ihmUtil);
+		 */
+
+		IhmUtil ihmUtil = new IhmUtil(new Scanner(System.in), new PizzaDaoTableau());
 		MainMenu Core = new MainMenu(ihmUtil);
 
-		// PizzaDaoFichier test = new PizzaDaoFichier();
-		// System.out.println(test.findAll());
+		PizzaDaoFichier test = new PizzaDaoFichier();
+		System.out.println(test.findAll());
+		// test.save(new Pizza("ORI", "L’orientale", CategoriePizza.VIANDE,
+		// 13.50));
 
 		while (Arret == false) {
 			Core.displayMenu();

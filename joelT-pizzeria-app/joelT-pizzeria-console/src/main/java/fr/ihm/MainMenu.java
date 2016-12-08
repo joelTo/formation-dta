@@ -1,5 +1,6 @@
 package fr.ihm;
 
+import java.io.IOException;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -36,7 +37,7 @@ public class MainMenu {
 	}
 
 	public void parseAndExec()
-			throws NumberFormatException, SavePizzaException, DeletePizzaException, UpdatesPizzaException {
+			throws NumberFormatException, SavePizzaException, DeletePizzaException, UpdatesPizzaException, IOException {
 		String input = ihmUtil.getScanner().next();
 		this.map.get(Integer.parseInt(input)).doAction();
 

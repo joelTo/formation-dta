@@ -1,5 +1,6 @@
 package fr.dao;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import fr.exception.DeletePizzaException;
@@ -11,7 +12,7 @@ public interface PizzaDaoFactory {
 
 	ArrayList<Pizza> findAll();
 
-	void save(Pizza newPizza) throws SavePizzaException;
+	void save(Pizza newPizza) throws SavePizzaException, IOException;
 
 	void delete(String pizzaToDelete) throws DeletePizzaException;
 
