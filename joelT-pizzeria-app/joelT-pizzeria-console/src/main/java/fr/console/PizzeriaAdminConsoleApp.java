@@ -54,7 +54,7 @@ public class PizzeriaAdminConsoleApp {
 			try {
 				Core.parseAndExec();
 			} catch (NumberFormatException e) {
-				// TODO Auto-generated catch block
+
 				e.printStackTrace();
 			} catch (SavePizzaException e) {
 				// TODO Auto-generated catch block

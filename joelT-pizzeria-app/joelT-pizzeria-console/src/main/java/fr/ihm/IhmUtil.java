@@ -8,6 +8,7 @@ public class IhmUtil {
 
 	private Scanner scanner;
 	private PizzaDaoFactory pizzaDao;
+	// private Logger log = Logger.getLogger();
 
 	public IhmUtil(Scanner scanner, PizzaDaoFactory pizzaDao) {
 		super();
