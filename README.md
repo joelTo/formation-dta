@@ -13,6 +13,9 @@ les différents projets enfants(modules).
   * La deuxième partie séparé en trois sous projet maven:
     * un projet joelT-pizzeria-console contenant la partie ihm de l'application
     * un projet joelT-pizzeria-dao contenant la partie donnée
+     * * Base de donnée : SGBD MySQL version{$5.x.x}
+     * * Base de donnée : Fichier
+     * * Base de donnée : Memoire vive 
     * un projet joelT-pizzeria-model contenant le modèle Pizza sur lequel l'application est basé.
  
  ## Bugs
