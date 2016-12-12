@@ -7,12 +7,28 @@
 		<version>1.0.0</version>
 		<relativePath>../joelT-pizzeria-parent</relativePath>
 	</parent>
+
 	<artifactId>joelT-pizzeria-dao</artifactId>
 	<dependencies>
 		<dependency>
-			<groupId>dta-pizzeria</groupId>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>joelT-pizzeria-model</artifactId>
 			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
 		</dependency>
 	</dependencies>
 </project>
