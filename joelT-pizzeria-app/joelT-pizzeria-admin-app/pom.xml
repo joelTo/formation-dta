@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>dta-pizzeria</groupId>
+		<artifactId>joelT-pizzeria-parent</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../joelT-pizzeria-parent</relativePath>
+	</parent>
+
+	<artifactId>joelT-pizzeria-admin-app</artifactId>
+	<packaging>war</packaging>
+
+	<name>pizzeria-admin-app Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+
+
+	<properties>
+		<jpa-persistence.version>1.0.0.Final</jpa-persistence.version><!-- dependance 
+			de la base de donnee JPA -->
+		<hibernate-entitymanager.version>5.1.0.Final</hibernate-entitymanager.version><!-- 
+			dependance de la base de donnee JPA hibernate -->
+	</properties>
+
+
+	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>dta-pizzeria</groupId>
+			<artifactId>joelT-pizzeria-dao</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>dta-pizzeria</groupId>
+			<artifactId>joelT-pizzeria-model</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<finalName>pizzeria-admin-app</finalName>
+	</build>
+</project>

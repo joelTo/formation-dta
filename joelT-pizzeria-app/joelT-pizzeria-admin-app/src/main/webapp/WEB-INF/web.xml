@@ -1,0 +1,96 @@
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+    <servlet-name>PizzaServletWebApi</servlet-name>
+    <servlet-class>fr.pizzeria.admin.web.PizzaServletWebApi</servlet-class>
+</servlet>
+
+
+<servlet-mapping>
+	<servlet-name>PizzaServletWebApi</servlet-name>
+	<url-pattern>/api/pizza/pizzas</url-pattern>
+</servlet-mapping>
+
+
+
+
+ <servlet>
+    <servlet-name>ListerPizzaController</servlet-name>
+    <servlet-class>fr.pizzeria.admin.web.ListerPizzaController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ListerPizzaController</servlet-name>
+	<url-pattern>/api/pizza/list</url-pattern>
+</servlet-mapping>
+
+
+
+ <servlet>
+    <servlet-name>EditPizzaController</servlet-name>
+    <servlet-class>fr.pizzeria.admin.web.EditPizzaController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>EditPizzaController</servlet-name>
+	<url-pattern>/api/pizza/edit</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+    <servlet-name>AddPizzaController</servlet-name>
+    <servlet-class>fr.pizzeria.admin.web.AddPizzaController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>AddPizzaController</servlet-name>
+	<url-pattern>/api/pizza/new</url-pattern>
+</servlet-mapping>
+
+
+ <servlet>
+    <servlet-name>DeletePizzaController</servlet-name>
+    <servlet-class>fr.pizzeria.admin.web.DeletePizzaController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>DeletePizzaController</servlet-name>
+	<url-pattern>/api/pizza/delete</url-pattern>
+</servlet-mapping>
+
+
+ <servlet>
+    <servlet-name>AuthAdminController</servlet-name>
+    <servlet-class>fr.pizzeria.admin.web.AuthAdminController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>AuthAdminController</servlet-name>
+	<url-pattern>/api/login/AuthAdminController</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+    <servlet-name>SignOutAdminController</servlet-name>
+    <servlet-class>fr.pizzeria.admin.web.SignOutAdminController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>SignOutAdminController</servlet-name>
+	<url-pattern>/api/login/SignOut</url-pattern>
+</servlet-mapping>
+
+
+ <servlet>
+    <servlet-name>ClientController</servlet-name>
+    <servlet-class>fr.pizzeria.admin.web.ClientController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ClientController</servlet-name>
+	<url-pattern>/api/client</url-pattern>
+</servlet-mapping>
+
+
+
+</web-app>
+

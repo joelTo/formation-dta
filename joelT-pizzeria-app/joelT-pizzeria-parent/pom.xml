@@ -13,6 +13,8 @@
 		<module>../joelT-pizzeria-console</module>
 		<module>../joelT-pizzeria-dao</module>
 		<module>../joelT-pizzeria-model</module>
+		<module>../joelT-pizzeria-console-client</module>
+		<module>../joelT-pizzeria-admin-app</module>
 	</modules>
 
 	<properties>
@@ -25,9 +27,11 @@
 		<junit.version>4.12</junit.version><!-- dependance de test -->
 		<jpa-persistence.version>1.0.0.Final</jpa-persistence.version><!-- dependance 
 			de la base de donnee JPA -->
-		<hibernate-entitymanager>5.1.0.Final</hibernate-entitymanager><!-- dependance 
-			de la base de donnee JPA hibernate -->
-		<logging-log4j.version>2.7</logging-log4j.version>
+		<hibernate-entitymanager.version>5.1.0.Final</hibernate-entitymanager.version><!-- 
+			dependance de la base de donnee JPA hibernate -->
+		<javaee-api.version>7.0</javaee-api.version> <!-- dependance concernant le module pizzeria-admin-app pour le HTTPServlet -->
+		<jstl.version>1.2</jstl.version> <!-- dependance utilisation des jstl https://mvnrepository.com/artifact/jstl/jstl -->
+		<jersey-client.version>1.19.3</jersey-client.version><!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-client -->
 	</properties>
 
 
@@ -72,33 +76,86 @@
 			<dependency>
 				<groupId>dta-pizzeria</groupId>
 				<artifactId>joelT-pizzeria-dao</artifactId>
-				<version>${projet.version}</version>
+				<version>${project.version}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>dta-pizzeria</groupId>
 				<artifactId>joelT-pizzeria-model</artifactId>
-				<version>${projet.version}</version>
+				<version>${project.version}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.hibernate.javax.persistence</groupId>
 				<artifactId>hibernate-jpa-2.1-api</artifactId>
 				<version>${jpa-persistence.version}</version>
-				<scope>compile</scope>
+				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-entitymanager</artifactId>
-				<version>${hibernate-entitymanger.version}</version>
-				<scope>compile</scope>
+				<version>${hibernate-entitymanager.version}</version>
+				<scope>provided</scope><!-- Mettre en <Scope>provided -->
 			</dependency>
 
 			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j</artifactId>
-				<version>2.7</version>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>${javaee-api.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+
+			<dependency>
+				<groupId>jstl</groupId>
+				<artifactId>jstl</artifactId>
+				<version>${jstl.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.glassfish.jersey.core</groupId>
+				<artifactId>jersey-client</artifactId>
+				<version>2.5</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.glassfish.jersey.media</groupId>
+				<artifactId>jersey-media-json-jackson</artifactId>
+				<version>2.5</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-bom</artifactId>
+				<version>4.2.6.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>4.3.3.RELEASE</version>
+				<optional>true</optional>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+			<dependency>
+				<groupId>com.h2database</groupId>
+				<artifactId>h2</artifactId>
+				<version>1.4.193</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-jpa</artifactId>
+				<version>1.10.1.RELEASE</version>
 			</dependency>
 
 		</dependencies>
